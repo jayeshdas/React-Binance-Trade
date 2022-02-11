@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Col, Form, Row } from "react-bootstrap";
 // import { Accordion, Col, Container, Row } from 'react-bootstrap';
 import { v4 as uuid } from "uuid";
-import BottomPanle from "./BottomPanle";
 // import api from "../../models/API";
 import { Marketcard } from "./marketcard";
 
@@ -95,6 +94,7 @@ export class MarketWatch extends Component {
     e.preventDefault();
     this.setState({
       data: temp,
+      newsymbol:''
     });
   };
 
@@ -110,37 +110,49 @@ export class MarketWatch extends Component {
     return (
       <React.Fragment>
         <Row>
-          <Col xs lg="3">
-            <div className="cardsPanle card example-1 square scrollbar-dusty-grass square thin">
+          <Col xs lg="4">
+            <div>
               <Marketcard data={this.state.data} RemoveCard={this.RemoveCard} />
             </div>
           </Col>
-          <Col xs lg="9">
-            <Form onSubmit={this.AddNewCard}>
-              <input
-                type="text"
-                className="form-control"
-                value={this.state.newsymbol}
-                name="symbolname"
-                id="symbolname"
-                onChange={(e) => this.setState({ newsymbol: e.target.value })}
-              />
+          <Col xs lg="8">
+            <Form className="form-inline" onSubmit={this.AddNewCard}>
+              <div class="form-group mb-2">
+                <label for="staticEmail2" class="sr-only">
+                  Email
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={this.state.newsymbol}
+                  name="symbolname"
+                  id="symbolname"
+                  required
+                  onChange={(e) => this.setState({ newsymbol: e.target.value })}
+                />
+              </div>
+              <div class="form-group mb-2">
               <input
                 type="submit"
                 className="btn btn-primary"
                 name="ADD"
                 value="ADD"
               />
+              </div>
+                </Form>
+              <div class="form-group mb-2">
               <button
                 className="btn btn-primary"
                 onClick={this.future_coin_socket}
               >
                 Start Feed
               </button>
+              </div>
+              <div class="form-group mb-2">
               <button className="btn btn-danger" onClick={this.stopFeed}>
                 Stop Feed
               </button>
-            </Form>
+              </div>
           </Col>
         </Row>
       </React.Fragment>

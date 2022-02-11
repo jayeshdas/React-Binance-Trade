@@ -1,17 +1,17 @@
 
 .card {
     border: none;
-    background-color: #1c2030;
-    color: #f2f5f8;
+    background-color: #ffffff;
+    color: #000000;
     width: inherit;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
 }
-.card:hover {
-    background-color: #080e15;
-}
+
 
 .stats {
     background: transparent !important;
-    color: #f2f5f8 !important
+    color: #000000 !important
 }
 
 .bid {
@@ -34,7 +34,7 @@
 }
 .spanlable{
     font-size: 10px;
-    color: #d8d8d8;
+    color: #000000;
     font-weight: bold;
     background-color: transparent!important;
 }
@@ -59,12 +59,11 @@ h6 {
     border-radius: 2px;
     text-align: center;
     padding: 3px 10px;
-    background: #ffffff21!important;
-    color: #01aa78;
+    background: #01aa78!important;
+    color: #ffffff;
     cursor: pointer;
 }
 .normalbuybtn:hover{
-    background: #01aa78!important;
     color: black;
 }
 .normalsellbtn{
@@ -74,12 +73,11 @@ h6 {
     text-align: center;
     border-radius: 2px;
     padding: 3px 10px;
-    background: #ffffff21!important;
-    color: #eb6a61;
+    background: #eb6a61!important;
+    color: #ffffff;
     cursor: pointer;
 }
 .normalsellbtn:hover{
-    background: #eb6a61!important;
     color: black;
 }
 .symbol{
@@ -262,6 +260,7 @@ h6 {
 }
 
 .custominput{
+    color: #000000;
     width: 50px;
     border: none;
     text-align-last: center;
@@ -544,7 +543,7 @@ footer.landing-footer-two {
 }
 
 .percentCard{
-    background: #1c2030;
+    background: #ffffff;
     padding: 2px 5px 2px 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     margin-right: 5px;

@@ -112,13 +112,16 @@ export class MarketWatch extends Component {
         <Row>
           <Col xs lg="4">
             <div>
+              <p>{process.env.REACT_APP_SECRET_NAME}</p>
+
+              
               <Marketcard data={this.state.data} RemoveCard={this.RemoveCard} />
             </div>
           </Col>
           <Col xs lg="8">
             <Form className="form-inline" onSubmit={this.AddNewCard}>
-              <div class="form-group mb-2">
-                <label for="staticEmail2" class="sr-only">
+              <div className="form-group mb-2">
+                <label htmlFor="staticEmail2" className="sr-only">
                   Email
                 </label>
                 <input
@@ -131,7 +134,7 @@ export class MarketWatch extends Component {
                   onChange={(e) => this.setState({ newsymbol: e.target.value })}
                 />
               </div>
-              <div class="form-group mb-2">
+              <div className="form-group mb-2">
               <input
                 type="submit"
                 className="btn btn-primary"
@@ -140,7 +143,7 @@ export class MarketWatch extends Component {
               />
               </div>
                 </Form>
-              <div class="form-group mb-2">
+              <div className="form-group mb-2">
               <button
                 className="btn btn-primary"
                 onClick={this.future_coin_socket}
@@ -148,7 +151,7 @@ export class MarketWatch extends Component {
                 Start Feed
               </button>
               </div>
-              <div class="form-group mb-2">
+              <div className="form-group mb-2">
               <button className="btn btn-danger" onClick={this.stopFeed}>
                 Stop Feed
               </button>

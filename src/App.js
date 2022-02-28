@@ -20,7 +20,6 @@ function App() {
        <Route path='/' element={<MarketWatch />}></Route>
        <Route path='/settings' element={<BottomPanle />}></Route>
        <Route path='/chart' element={<Chart/>}></Route>
-       <Route path='/todo' element={<ToDo/>}></Route>
 
      </Routes>
       {/* <Row>
